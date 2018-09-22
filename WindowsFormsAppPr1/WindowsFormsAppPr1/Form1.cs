@@ -23,6 +23,18 @@ namespace WindowsFormsAppPr1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            foreach (var series in chart1.Series)
+                series.Points.Clear();
+            foreach (var series in chart2.Series)
+                series.Points.Clear();
+            foreach (var series in chart3.Series)
+                series.Points.Clear();
+            list.Clear();
+            list2.Clear();
+            list3.Clear();
+            dataGridView1.DataSource = null;
+            dataGridView2.DataSource = null;
+            dataGridView3.DataSource = null;
             int m, n;
             double lambda;
             try
@@ -94,7 +106,7 @@ namespace WindowsFormsAppPr1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 
